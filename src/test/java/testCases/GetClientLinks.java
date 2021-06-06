@@ -23,9 +23,15 @@ public class GetClientLinks extends BaseClass{
     }
 
     @Parameters("sitemapURL")
-    @Test
+    @Test(enabled = false)
     public void extractAllLinksFromParticularSitemap(String sitemapURL) throws IOException {
         ExtractNumberOfSitemapLinksFromSitemaps.getAllPostLinkFromParticularSiteMap(sitemapURL,driver);
+    }
+
+    @Parameters("sitemapURL")
+    @Test()
+    public void extractClientsFromArticles(String sitemapURL) throws IOException {
+        ExtractNumberOfSitemapLinksFromSitemaps.getAllClientsLink(sitemapURL,driver);
     }
 
 
