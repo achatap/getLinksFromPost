@@ -124,7 +124,7 @@ public class ExtractNumberOfSitemapLinksFromSitemaps{
         wbNew.close();
     }
 
-    public static void getAllClientsLink(String websiteSitemapURL, WebDriver driver) throws IOException {
+    public static void getAllClientsLink(String websiteSitemapURL, WebDriver driver, String elementOfContent) throws IOException {
         String fileNameOfExelWithAllSitemapLinks = websiteSitemapURL.replaceAll("[^a-zA-Z0-9]", "_");
 
         File src = new File("src/main/resources/" + fileNameOfExelWithAllSitemapLinks + ".xlsx");
@@ -146,7 +146,7 @@ public class ExtractNumberOfSitemapLinksFromSitemaps{
 
             System.out.println("URL is : "+ sheet.getRow(i).getCell(1).getStringCellValue());
 
-            WebElement articleBody = driver.findElement(By.xpath("//div[@class='entry-content letter-bold']"));
+            WebElement articleBody = driver.findElement(By.xpath(elementOfContent));
 
             List<WebElement> allUrls=articleBody.findElements(By.tagName("a"));
             int allLinkCount = allUrls.size();

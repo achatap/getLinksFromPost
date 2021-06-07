@@ -3,6 +3,7 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/achat/IdeaProjects/getLinksFromPost">
         <parameter name="sitemapURL" value="https://jharaphula.com/sitemap.xml"/>
+        <parameter name="contentElement" value="//div[@class='sf-entry-content']"/>
         <parameter name="browser"  value="chrome"/>
         <classes>
             <class name="testCases.GetClientLinks"/>
