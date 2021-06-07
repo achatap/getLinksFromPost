@@ -17,19 +17,19 @@ import java.io.IOException;
 public class GetClientLinks extends BaseClass{
 
     @Parameters("sitemapURL")
-    @Test(enabled = false)
+    @Test(enabled = true, priority = 1)
     public void extractLinksFromSitemap(String sitemapURL) throws IOException, InterruptedException {
         ExtractNumberOfSitemapLinksFromSitemaps.getAllSitemapLinks(sitemapURL, driver);
     }
 
     @Parameters("sitemapURL")
-    @Test(enabled = false)
+    @Test(enabled = true, priority = 2)
     public void extractAllLinksFromParticularSitemap(String sitemapURL) throws IOException {
         ExtractNumberOfSitemapLinksFromSitemaps.getAllPostLinkFromParticularSiteMap(sitemapURL,driver);
     }
 
     @Parameters("sitemapURL")
-    @Test()
+    @Test(enabled = true, priority = 3)
     public void extractClientsFromArticles(String sitemapURL) throws IOException {
         ExtractNumberOfSitemapLinksFromSitemaps.getAllClientsLink(sitemapURL,driver);
     }

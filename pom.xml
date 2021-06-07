@@ -13,27 +13,12 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
         <junit.version>4.13.1</junit.version>
-        <cucumber.version>6.9.0</cucumber.version>
         <maven.compiler.version>3.8.1</maven.compiler.version>
         <maven.surefire.version>2.22.2</maven.surefire.version>
 
     </properties>
 
     <dependencies>
-
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-java</artifactId>
-            <version>${cucumber.version}</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
 
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -47,10 +32,11 @@
             <version>4.2.2</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>6.14.3</version>
+            <version>7.4.0</version>
             <scope>test</scope>
         </dependency>
 
@@ -89,13 +75,13 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven.surefire.version}</version>
                 <configuration>
-                    <includes>
-                        <include>**/ParallelRun.java</include>
-                    </includes>
-                    <parallel>methods</parallel>
-                    <threadCount>4</threadCount>
-                    <useUnlimitedThreads>false</useUnlimitedThreads>
+                    <!-- Suite testng xml file to consider for test execution -->
+                    <suiteXmlFiles>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
+<!--                        <suiteXmlFile>suites-test-testng.xml</suiteXmlFile>-->
+                    </suiteXmlFiles>
                 </configuration>
+
             </plugin>
 
         </plugins>
