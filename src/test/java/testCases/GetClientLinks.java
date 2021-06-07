@@ -34,5 +34,4 @@ public class GetClientLinks extends BaseClass{
         ExtractNumberOfSitemapLinksFromSitemaps.getAllClientsLink(sitemapURL,driver,contentElement);
     }
 
-
 }
