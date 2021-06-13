@@ -28,10 +28,10 @@ public class GetClientLinks extends BaseClass{
         ExtractNumberOfSitemapLinksFromSitemaps.getAllPostLinkFromParticularSiteMap(sitemapURL,driver);
     }
 
-    @Parameters({"sitemapURL","contentElement"})
+    @Parameters({"sitemapURL","contentElement", "rowStart"})
     @Test(enabled = true, priority = 3)
-    public void extractClientsFromArticles(String sitemapURL, String contentElement) throws IOException {
-        ExtractNumberOfSitemapLinksFromSitemaps.getAllClientsLink(sitemapURL,driver,contentElement);
+    public void extractClientsFromArticles(String sitemapURL, String contentElement, String rowStart) throws IOException {
+        ExtractNumberOfSitemapLinksFromSitemaps.getAllClientsLink(sitemapURL,driver,contentElement,rowStart);
     }
 
 }

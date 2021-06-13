@@ -135,7 +135,7 @@ public class ExtractNumberOfSitemapLinksFromSitemaps{
 
     }
 
-    public static void getAllClientsLink(String websiteSitemapURL, WebDriver driver, String elementOfContent) throws IOException {
+    public static void getAllClientsLink(String websiteSitemapURL, WebDriver driver, String elementOfContent, String rowStart) throws IOException {
 
         try {
 
@@ -152,7 +152,7 @@ public class ExtractNumberOfSitemapLinksFromSitemaps{
             System.out.println(">>>>>>>>>>>>" + lastRow);
 
             totalRow = 0;
-            for (int i = 0; i < lastRow; i++) {
+            for (int i = Integer.parseInt(rowStart); i < lastRow; i++) {
 
                 System.out.println("Remaining count is>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>: " + (lastRow - i));
 
