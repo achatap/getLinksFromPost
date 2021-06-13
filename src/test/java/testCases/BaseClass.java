@@ -11,6 +11,8 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
+import java.util.concurrent.TimeUnit;
+
 public class BaseClass {
 
     public WebDriver driver;
@@ -46,6 +48,7 @@ public class BaseClass {
 
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
+        driver.manage().timeouts().pageLoadTimeout(300, TimeUnit.SECONDS);
     }
 
     @AfterTest
