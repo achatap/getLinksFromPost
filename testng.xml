@@ -6,6 +6,7 @@
         <parameter name="contentElement" value="//div[@id='content']"/>
         <parameter name="browser"  value="chrome"/>
         <parameter name="rowStart"  value="0"/>
+        <parameter name="saveRowStart"  value="0"/>
         <classes>
             <class name="testCases.GetClientLinks"/>
         </classes>
