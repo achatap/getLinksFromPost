@@ -24,7 +24,10 @@ public class BaseClass {
         if (browser.equals("chrome")) {
             WebDriverManager.chromedriver().setup();
             ChromeOptions options= new ChromeOptions();
-            options.setHeadless(true);
+            options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200", "--disable-notifications",
+        "--ignore-certificate-errors","--disable-extensions","--no-sandbox","--disable-dev-shm-usage");
+            
+//             options.setHeadless(true);
             driver = new ChromeDriver(options);
 
         } else if (browser.equals("firefox")) {
