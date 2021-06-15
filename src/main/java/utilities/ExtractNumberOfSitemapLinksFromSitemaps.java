@@ -100,6 +100,8 @@ public class ExtractNumberOfSitemapLinksFromSitemaps{
                 String completeURL;
 
                 for (int j = 0; j < allLinkCount; j++) {
+                    
+                    System.out.println("Sitemap URl links on the page : " + allUrls.get(j).getText() );
 
                     if (websiteSitemapURL.contains("https")) {
                         completeURL = websiteSitemapURL.replaceAll("https://", "");
