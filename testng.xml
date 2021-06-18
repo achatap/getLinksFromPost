@@ -2,8 +2,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/achat/IdeaProjects/getLinksFromPost">
-        <parameter name="sitemapURL" value="https://www.6to23.com/sitemap_index.xml"/>
-        <parameter name="contentElement" value="//div[@class='td-post-content tagdiv-type']"/>
+        <parameter name="sitemapURL" value="https://bloggingheros.com/sitemap_index.xml"/>
+        <parameter name="contentElement" value="//div[@class='entry']"/>
         <parameter name="browser"  value="chrome"/>
         <parameter name="rowStart"  value="0"/>
         <parameter name="saveRowStart"  value="0"/>
