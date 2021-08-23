@@ -29,7 +29,7 @@ public class GetClientLinks extends BaseClass{
     }
 
     @Parameters({"sitemapURL","contentElement", "rowStart", "saveRowStart"})
-    @Test(enabled = true, priority = 3)
+    @Test(enabled = false, priority = 3)
     public void extractClientsFromArticles(String sitemapURL, String contentElement, String rowStart, String saveRowStart) throws IOException {
         ExtractNumberOfSitemapLinksFromSitemaps.getAllClientsLink(sitemapURL,driver,contentElement,rowStart, saveRowStart);
     }
